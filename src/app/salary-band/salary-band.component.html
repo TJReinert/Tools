@@ -1,0 +1,26 @@
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Band Minimum</mat-label>
+    <span matPrefix>$</span>
+    <input type="number" matInput [(ngModel)]="bandMinimum" (ngModelChange)="update()">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Band Maximum</mat-label>
+    <span matPrefix>$</span>
+    <input type="number" matInput [(ngModel)]="bandMaximum" (ngModelChange)="update()">
+  </mat-form-field>
+  <br>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Current Salary</mat-label>
+    <span matPrefix>$</span>
+    <input type="number" matInput [(ngModel)]="currentSalary" (ngModelChange)="update()">
+  </mat-form-field>
+</div>
+
+<div>
+  You are currently <strong>{{percentile | percent:'1.2-2'}}</strong> into your salary band.
+</div>
+
+<app-gauge></app-gauge>
